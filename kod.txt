@@ -1,0 +1,283 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+using System.IO;
+
+namespace FTN
+{
+    class Program
+    {
+
+        struct Zaposleni
+        {
+            public string Ime;
+            public string MBR;
+            public string Pol;
+            public string Sektor;
+            public int Plata;
+        }
+
+        static void Main(string[] args)
+        {
+            List<Zaposleni> zaposleni = new List<Zaposleni>();
+
+            bool run = true;
+            while (run)
+            {
+                Console.WriteLine("1. Dodaj zaposlenog");
+                Console.WriteLine("2. Ispisati informacije zaposlenog na osnovu MBR");
+                Console.WriteLine("3. Modifikuj informacije zaposlenog na osnovu MBR");
+                Console.WriteLine("4. Upisi podatke u fajlove Radnici i Radnice");
+                Console.WriteLine("5. Brisanje svih radnika sa platom vecom od 40000 iz sektora HR");
+                Console.WriteLine("6. Ispis podataka prvih 5 zaposlenih iz Radnici");
+                Console.WriteLine("7. Bonus");
+                Console.WriteLine("0. Izlaz");
+                Console.Write("Odaberite opciju: ");
+                int opcija = int.Parse(Console.ReadLine());
+                Console.WriteLine();
+
+                switch (opcija)
+                {
+                    case 1:
+                        {
+                            DodajZaposlenog(zaposleni);
+                        }
+                        break;
+                    case 2:
+                        {
+                            MbrPodaci(zaposleni);
+                        }
+                        break;
+                    case 3:
+                        {
+                            Modifikuj(zaposleni);
+                        }
+                        break;
+                    case 4:
+                        {
+                            UpisiUFAjl(zaposleni);
+                        }
+                        break;
+                    case 5:
+                        {
+                            Brisanje(zaposleni);
+                        }
+                        break;
+                    case 6:
+                        {
+                            IspisIzFajla(zaposleni);
+                        }
+                        break;
+                    case 7:
+                        {
+                            Matrica();
+                        }
+                        break;
+                    case 0:
+                        {
+                            run = false;
+                        }
+                        break;
+                    default:
+                        {
+                            Console.WriteLine("Odabrana je nepostojeca opcija!");
+                        }
+                        break;
+                }
+
+            }
+        }
+        static void DodajZaposlenog(List<Zaposleni> zaposleni)
+        {
+            Zaposleni zaposlen = new Zaposleni();
+            Console.Write("Ime: ");
+            zaposlen.Ime = Console.ReadLine();
+            Console.Write("MBR: ");
+            zaposlen.MBR = Console.ReadLine();
+            do
+            {
+                Console.Write("Pol (M/F):");
+                zaposlen.Pol = Console.ReadLine();
+                if ((zaposlen.Pol == "M") && (zaposlen.Pol == "F"))
+                {
+                    Console.WriteLine("Nepostojeci pol!");
+                }
+            } while ((zaposlen.Pol == "M") && (zaposlen.Pol == "F"));
+
+            do
+            {
+                Console.Write("Sektor (IT/HR/RD):");
+                zaposlen.Sektor = Console.ReadLine();
+                if ((zaposlen.Sektor == "IT") && (zaposlen.Sektor == "HR") && (zaposlen.Sektor == "RD"))
+                {
+                    Console.WriteLine("Nepostojeci sektor!");
+                }
+            } while ((zaposlen.Sektor == "IT") && (zaposlen.Sektor == "HR") && (zaposlen.Sektor == "RD"));
+
+            Console.Write("Plata: ");
+            zaposlen.Plata = int.Parse(Console.ReadLine());
+            zaposleni.Add(zaposlen);
+            Console.WriteLine();
+        }
+        static void MbrPodaci(List<Zaposleni> zaposleni)
+        {
+            Console.Write("\nUnesite MBR za trazenje: ");
+            string trazi = Console.ReadLine();
+            bool pronadjen = false;
+            foreach(Zaposleni zap in zaposleni)
+            {
+                if(zap.MBR == trazi)
+                {
+                    Console.WriteLine("Maticni broj: {0}, Ime: {1}, Pol: {2}, Plata: {3}, Sektor: {4}\n", zap.MBR, zap.Ime, zap.Pol, zap.Plata, zap.Sektor);
+                    pronadjen = true;
+                }
+            }
+            if (pronadjen == false)
+            {
+                Console.WriteLine("Uneti MBR ne postoji u bazi\n");
+            }
+        }
+        static void Modifikuj(List<Zaposleni> zaposleni)
+        {
+
+            Console.Write("\nUnesite MBR zaposlenog za modifikaciju: ");
+            string trazi = Console.ReadLine();
+            bool pronadjen = false;
+            for (int i = 0; i < zaposleni.Count; i++)
+            {
+                if (zaposleni[i].MBR == trazi)
+                {
+                    Zaposleni zapMod = new Zaposleni();
+                    Console.Write("Ime: ");
+                    zapMod.Ime = Console.ReadLine();
+                    Console.Write("MBR: ");
+                    zapMod.MBR = Console.ReadLine();
+                    do
+                    {
+                        Console.Write("Pol (M/F):");
+                        zapMod.Pol = Console.ReadLine();
+                        if ((zapMod.Pol == "M") && (zapMod.Pol == "F"))
+                        {
+                            Console.WriteLine("Nepostojeci pol!");
+                        }
+                    } while ((zapMod.Pol == "M") && (zapMod.Pol == "F"));
+
+                    do
+                    {
+                        Console.Write("Sektor (IT/HR/RD):");
+                        zapMod.Sektor = Console.ReadLine();
+                        if ((zapMod.Sektor == "IT") && (zapMod.Sektor == "HR") && (zapMod.Sektor == "RD"))
+                        {
+                            Console.WriteLine("Nepostojeci sektor!");
+                        }
+                    } while ((zapMod.Sektor == "IT") && (zapMod.Sektor == "HR") && (zapMod.Sektor == "RD"));
+
+                    Console.Write("Plata: ");
+                    zapMod.Plata = int.Parse(Console.ReadLine());
+
+                    zaposleni[i] = zapMod;
+                    Console.WriteLine("Uspesna modifikacija podataka zaposlenog sa {0} MBR \n", trazi);
+                    pronadjen = true;
+                }
+            }
+            if (!pronadjen)
+            {
+                Console.WriteLine("Uneti MBR nepostoji u bazi\n");
+            }
+        }
+        static void UpisiUFAjl(List<Zaposleni> zaposleni)
+        {
+            StreamWriter sw1 = new StreamWriter(@".\Radnici.txt");
+            StreamWriter sw2 = new StreamWriter(@".\Radnice.txt");
+
+            for(int i = 0; i < zaposleni.Count; i++)
+            {
+                if(zaposleni[i].Pol == "M")
+                {
+                    sw1.WriteLine("{0}, {1}", zaposleni[i].Ime, zaposleni[i].Sektor);
+                }
+                if (zaposleni[i].Pol == "F")
+                {
+                    sw2.WriteLine("{0}, {1}", zaposleni[i].Ime, zaposleni[i].Sektor);
+                }
+            }
+
+            sw1.Close();
+            sw2.Close();
+        }
+        static void Brisanje(List<Zaposleni> zaposleni)
+        {
+            for (int i = 0; i < zaposleni.Count; i++)
+            {
+                if ((zaposleni[i].Plata > 40000) && (zaposleni[i].Sektor == "HR"))
+                {
+                    zaposleni.Remove(zaposleni[i]);
+                }
+            }
+            Console.WriteLine("Izbrisani zaposleni iz sektora HR i plate vece od 40000\n");
+        }
+        static void IspisIzFajla(List<Zaposleni> zaposleni)
+        {
+            string line = "";
+            bool postoji = false;
+            if (!File.Exists(@".\Radnici.txt"))
+            {
+                Console.WriteLine("Nema podataka o zaposlenima");
+            }
+            else
+            {
+                StreamReader sr = new StreamReader(@".\Radnici.txt");
+                line = sr.ReadLine();
+                if (line == null)
+                {
+                    Console.WriteLine("Nema podataka o zaposlenima");
+                }
+                else
+                {
+                    for(int i = 0; i < 5; i++)
+                    {
+                        Console.WriteLine(line);
+                        line = sr.ReadLine();
+                    }
+                }
+                sr.Close();
+            }
+
+
+
+
+        }
+        static void Matrica()
+        {
+            Console.Write("\nUnesite dimenzije kvadratne matrice: ");
+            int dimenzija = int.Parse(Console.ReadLine());
+
+            int[,] matrix = new int[dimenzija, dimenzija];
+
+            for(int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    matrix[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+
+            int zbir = 0;
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    if(i == j)
+                    {
+                        zbir += matrix[i, j];
+                    }
+                }
+            }
+            Console.WriteLine("Zbir elemenata na glavnoj dijagonali: " + zbir);
+        }
+        
+    }
+}
