@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sport Mission</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../styles/stranice.css" />
+    <link rel="stylesheet" href="../styles/ski.css" />
+  </head>
+  <body>
+    <div class="content">
+      <nav class="navbar" id="navbar">
+        <div class="branding">
+          <img class="logo" src="../img/logo.svg" alt="logo" />
+          <h1 class="name">Sport Mission</h1>
+        </div>
+        <div class="pages">
+          <ul class="nav-links">
+            <li class="items"><a href="../index.html">Home</a></li>
+            <li class="items"><a href="./clothes.html">Clothes</a></li>
+            <li class="items"><a href="./shoes.html">Shoes</a></li>
+            <li class="items"><a href="./ski.html">Ski</a></li>
+            <li class="items"><a href="./MTB.html">MTB</a></li>
+            <li class="items"><a href="./contact.html">Contact</a></li>
+            <li class="items"><a href="./sale.html">%SALE</a></li>
+          </ul>
+        </div>
+        <a class="toggle" href="#">
+          <i class="fas fa-bars"></i>
+        </a>
+      </nav>
+    </div>
+
+    <footer>
+      <div class="content">
+        <div class="top">
+          <div class="logo-details">
+            <img src="../img/running.png" alt="logo" />
+            <span class="logo_name">Sport Mission</span>
+          </div>
+          <div class="media-icons">
+            <a href="https://www.instagram.com/aleksa.strajin/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/nemanja-savkovi%C4%87-485a15254/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/marko-jevic-25ba87154/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/filip-ivanovic-534809214/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+        <div class="link-boxes">
+          <ul class="box">
+            <li class="link_name"><a href="../index.html">Home</a></li>
+            <li class="link_name"><a href="./clothes.html">Clothes</a></li>
+            <li class="link_name"><a href="./shoes.html">Shoes</a></li>
+            <li class="link_name"><a href="./ski.html">Ski</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name"><a href="./MTB.html">MTB</a></li>
+            <li class="link_name"><a href="./sale.html">%Sale</a></li>
+            <li class="link_name"><a href="./contact.html">Contact</a></li>
+            <li class="link_name">
+              <a href="./contact.html">About us</a>
+            </li>
+          </ul>
+          <ul id="map" class="box">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3245.5432731474107!2d19.85182286462741!3d45.24503561762255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b100d462acd9f%3A0x6c6724453c8b1fc6!2sFaculty%20of%20Technical%20Sciences!5e0!3m2!1sen!2srs!4v1672942007801!5m2!1sen!2srs"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </ul>
+          <ul class="box input-box">
+            <li class="link_name">Subscribe to Newsletters</li>
+            <li>
+              <input
+                id="mailInput"
+                type="email"
+                placeholder="Enter your email"
+              />
+            </li>
+            <li>
+              <input type="button" value="Subscribe" onclick="subscribe()" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text"
+            >Copyright © 2023 Grupa 4, Projekat UIIS. All rights reserved</span
+          >
+          <span class="policy_terms">
+            <a href="../index.html">Privacy policy</a>
+            <a href="../index.html">Terms & condition</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+    <script src="../scripts/newsletter.js"></script>
+    <script src="../scripts/navbar.js"></script>
+  </body>
+</html>

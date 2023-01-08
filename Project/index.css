@@ -1,0 +1,217 @@
+.popust {
+  background-image: linear-gradient(160deg, #25373a, #4c8a8e);
+  padding: 50px;
+  margin-bottom: 10px;
+}
+
+.popust p {
+  text-align: center;
+  color: white;
+  padding: 5px;
+}
+
+.igraj {
+  border: none;
+  text-align: center;
+  padding: 10px 25px;
+  border-radius: 25px;
+  display: block;
+  margin: auto;
+}
+
+.igraj:hover {
+  background-color: rgb(221, 221, 221);
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.slika1 {
+  width: 100%;
+  height: 100%;
+  overflow-wrap: normal;
+}
+
+.textImg {
+  position: relative;
+}
+
+.top-right {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: black;
+}
+
+.top-right {
+  text-align: right;
+}
+
+.slika1 p {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.biciklista {
+  object-fit: cover;
+  width: 100%;
+  height: 700px;
+}
+
+.najbolji {
+  text-align: center;
+  margin: 50px;
+}
+.najboljiNav {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.najboljiNav input {
+  margin-right: 5px;
+}
+
+.best {
+  border: none;
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 10px 25px;
+  border-radius: 25px;
+  display: inline-block;
+  margin: auto;
+}
+.best:hover {
+  background-color: rgb(176, 174, 174);
+  color: black;
+}
+
+.scrollbox {
+  white-space: nowrap;
+  overflow: auto;
+  visibility: hidden;
+}
+
+.scrollbox-content img {
+  width: 451px;
+  height: 451px;
+}
+
+.scrollbox-content,
+.scrollbox:hover,
+.scrollbox:focus {
+  visibility: visible;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(163, 161, 161);
+}
+
+.popularno {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.popularno p {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.slika2 {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.bottom-right {
+  text-align: right;
+  position: absolute;
+  bottom: 15px;
+  right: 40px;
+  color: black;
+}
+
+.slika2 p {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.contactUs {
+  margin: auto;
+  text-align: center;
+}
+
+.text p {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.slika3 {
+  position: relative;
+  margin-top: 80px;
+}
+
+.slika3 p {
+  margin-bottom: 5px;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 15px;
+  left: 60px;
+  color: black;
+}
+
+.pozeri {
+  display: flex;
+}
+
+.pozeri div:nth-child(2) {
+  margin: 0 10px;
+}
+
+.pozeri div img {
+  width: 100%;
+}
+
+@media (max-width: 545px) {
+  .najboljiNav {
+    display: flex;
+    flex-direction: column;
+  }
+  .najboljiNav input {
+    margin-bottom: 10px;
+  }
+  .slika1 img {
+    height: 75vh;
+  }
+  .biciklista img {
+    height: 75vh;
+  }
+}
