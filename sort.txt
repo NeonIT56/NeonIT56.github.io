@@ -1,0 +1,52 @@
+using System;
+
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Collections;
+
+namespace list_sort
+{
+    class Program
+    {
+
+        struct Person
+        {
+            public string Name;
+            public int age;
+
+        }
+
+        static void Main(string[] args)
+        {
+            List<Person> citizens = new List<Person>();  // Creating List Of Person having size 5;  
+            Person person = new Person();
+            //Adding Persons in List
+            for(int i = 0; i < 3; i++)
+            {
+                Console.Write("Name: ");
+                person.Name = Console.ReadLine();
+                Console.Write("Age: ");
+                person.age = int.Parse(Console.ReadLine());
+
+                citizens.Add(person);
+            }
+
+            Console.WriteLine(":::::::::::::::::::::::::::::::Before Sorting ::::::::::::::::::::::::");
+            // Prinring The List Names...
+            foreach (Person p in citizens)
+            { // Loop through List with foreach
+                Console.WriteLine("{0}\t{1}",p.Name,p.age);
+            }
+            Console.WriteLine(":::::::::::::::::::::::::::::::After Sorting :::::::::::::::::");
+            // Problem #  Sort List of Citizens According to Citizen Names orderby-alphabetical-order
+            citizens.Sort((x, y) => string.Compare(x.Name, y.Name));
+            foreach (Person p in citizens)         // Prniting After alphabetical Sort.
+            { // Loop through List with foreach
+                Console.WriteLine("{0}\t{1}", p.Name, p.age);
+            }
+            Console.ReadKey();    // to Stay On Screen.
+        }
+    }
+}
