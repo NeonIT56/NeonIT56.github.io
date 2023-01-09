@@ -107,6 +107,9 @@ section {
 .flex2 {
   display: flex;
 }
+.flex3 {
+  padding-top: 3vh;
+}
 .desno {
   width: 50%;
 }
@@ -647,5 +650,17 @@ section {
   .hero-header {
     padding: 0;
     line-height: 100%;
+  }
+}
+@media (max-width: 400px) {
+  h1 {
+    font-size: 250px;
+  }
+  .h1-sec2 {
+    font-size: 250px;
+    top: 12vw;
+  }
+  h2 {
+    font-size: 56px;
   }
 }

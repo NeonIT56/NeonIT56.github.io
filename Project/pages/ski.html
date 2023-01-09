@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sport Mission</title>
-    <link rel="icon" type="image/x-icon" href="../img/logo.svg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -14,13 +13,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="../styles/stranice.css" />
-    <link rel="stylesheet" href="../styles/ski.css" />
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/stranice.css" />
+    <link rel="stylesheet" href="/styles/ski.css" />
+    <script src="index.js"></script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   </head>
-  <body>
+  <body onload="startTime()">
     <div class="content">
       <nav class="navbar" id="navbar">
         <div class="branding">
@@ -42,8 +43,15 @@
           <i class="fas fa-bars"></i>
         </a>
       </nav>
+      <style>
+        
+      </style>
+    </head>
+    <body>
+
       <!--mini animirani mis za skrolovanje-->
       <div class="mouse_scroll">
+
         <div class="mouse">
           <div class="wheel"></div>
         </div>
@@ -54,164 +62,107 @@
         </div>
       </div>
 
-      <img class="krugic" src="../img/krug.png" alt="" />
+
+      <img class="krugic" src="/img/krug.png" alt="">
+        
+
 
       <div class="scroll-control">
         <span class="one"></span>
         <span class="two"></span>
         <span class="three"></span>
       </div>
-
+      
       <section class="scroll s-one hidden" data-section-name="s-one">
-        <div class="container">
+        
+        
+        <div class="container">         
           <div class="flex">
-            <img
-              class="brend-sl brend-1-sl"
-              src="../img/volkl-logo-png-transparent.png"
-              alt=""
-            />
-            <img
-              class="brend-sl brend-2-sl"
-              src="../img/dynastar-vector-logo 1.png"
-              alt=""
-            />
-            <img
-              class="brend-sl brend-3-sl"
-              src="../img/lange-boots-vector-logo 1.png"
-              alt=""
-            />
-            <img
-              class="brend-sl brend-4-sl"
-              src="../img/alpina-logo 1.png"
-              alt=""
-            />
+            <img class="brend-sl brend-1-sl" src="/img/volkl-logo-png-transparent.png" alt="">
+            <img class="brend-sl brend-2-sl" src="/img/dynastar-vector-logo 1.png" alt="">
+            <img class="brend-sl brend-3-sl" src="/img/lange-boots-vector-logo 1.png" alt="">
+            <img class="brend-sl brend-4-sl" src="/img/alpina-logo 1.png" alt="">
             <div data-aos="fade-right" data-aos-duration="1000" class="levo">
+              
               <h2 class="hero-header">Najbolji izbor ski odela</h2>
               <h1>01</h1>
-              <p class="hero-par">
-                Imamo najširu ponudu ski odela po najboljim cenama koje ćete
-                obožavati
-              </p>
-
+              <p class="hero-par">Imamo najširu ponudu ski odela po najboljim cenama koje ćete obožavati</p>
+              
               <button class="button-53" role="button">Pogledaj ponudu</button>
+
+
+
             </div>
             <div class="desno" data-aos="fade-left" data-aos-duration="1500">
-              <img
-                style="width: 100%; height: auto"
-                id="hero-slika"
-                src="../img/skiodelo.jpg"
-                alt="slika-odela"
-                srcset=""
-              />
+              
+              <img style="width: 100%;height:auto;" id="hero-slika" src="/img/skiodelo.jpg" alt="slika-odela" srcset="">
             </div>
           </div>
         </div>
       </section>
-
+  
       <section class="scroll s-two" data-section-name="s-two">
         <div class="container">
           <div class="flex2">
-            <img
-              class="brend-sl brend-1-sl"
-              src="../img/volkl-logo-png-transparent.png"
-              alt=""
-            />
-            <img
-              class="brend-sl brend-2-sl"
-              src="../img/dynastar-vector-logo 1.png"
-              alt=""
-            />
-            <img
-              class="brend-sl brend-3-sl"
-              src="../img/lange-boots-vector-logo 1.png"
-              alt=""
-            />
-            <img
-              class="brend-sl brend-4-sl"
-              src="../img/alpina-logo 1.png"
-              alt=""
-            />
+            <img class="brend-sl brend-1-sl" src="/img/volkl-logo-png-transparent.png" alt="">
+            <img class="brend-sl brend-2-sl" src="/img/dynastar-vector-logo 1.png" alt="">
+            <img class="brend-sl brend-3-sl" src="/img/lange-boots-vector-logo 1.png" alt="">
+            <img class="brend-sl brend-4-sl" src="/img/alpina-logo 1.png" alt="">
             <div class="levo2" data-aos="fade-right" data-aos-duration="1000">
-              <img
-                style="width: 100%; height: auto"
-                id="hero-slika"
-                src="../img/skicipele.jpg"
-                alt="slika-odela"
-                srcset=""
-              />
+              
+
+              <img style="width: 100%;height:auto;" id="hero-slika" src="/img/skicipele.jpg" alt="slika-odela" srcset="">
+
             </div>
             <div class="desno2" data-aos="fade-left" data-aos-duration="1500">
               <h2 class="hero-header">Najnovija kolekcija ski cipela</h2>
               <h1 class="h1-sec2">02</h1>
-              <p class="hero-par">
-                Najbolje ski cipele za najbolje profesionalce po najboljim
-                cenama
-              </p>
-
-              <button class="button-53" id="zuto-dugme" role="button">
-                Pogledaj ponudu
-              </button>
+              <p class="hero-par">Najbolje ski cipele za najbolje profesionalce po najboljim cenama</p>
+                                  
+              <button class="button-53" id="zuto-dugme" role="button">Pogledaj ponudu</button>
+              
             </div>
           </div>
+            
+          
         </div>
       </section>
-
-      <section
-        class="scroll s-three interstitialSection"
-        data-section-name="s-three"
-      >
+  
+      <section class="scroll s-three interstitialSection" data-section-name="s-three">
         <div class="container">
-          <div class="flex">
-            <img
-              class="brend-sl brend-1-sl"
-              src="../img/volkl-logo-png-transparent.png"
-              alt=""
-            />
-            <img
-              class="brend-sl brend-2-sl"
-              src="../img/dynastar-vector-logo 1.png"
-              alt=""
-            />
-            <img
-              class="brend-sl brend-3-sl"
-              src="../img/lange-boots-vector-logo 1.png"
-              alt=""
-            />
-            <img
-              class="brend-sl brend-4-sl"
-              src="../img/alpina-logo 1.png"
-              alt=""
-            />
+          <div class="flex flex3">
+            <img class="brend-sl brend-1-sl" src="/img/volkl-logo-png-transparent.png" alt="">
+            <img class="brend-sl brend-2-sl" src="/img/dynastar-vector-logo 1.png" alt="">
+            <img class="brend-sl brend-3-sl" src="/img/lange-boots-vector-logo 1.png" alt="">
+            <img class="brend-sl brend-4-sl" src="/img/alpina-logo 1.png" alt="">
             <div class="levo" data-aos="fade-right" data-aos-duration="1000">
               <h2 class="hero-header">Najbolji izbor profi skija</h2>
               <h1>03</h1>
-              <p class="hero-par">
-                Najkvalitetnije skije na tržištu po najboljim cenama
-              </p>
+              <p class="hero-par">Najkvalitetnije skije na tržištu po najboljim cenama</p>
+              
+              <button class="button-53" id="belo-dugme" role="button">Pogledaj ponudu</button>
 
-              <button class="button-53" id="belo-dugme" role="button">
-                Pogledaj ponudu
-              </button>
+
+
             </div>
             <div class="desno" data-aos="fade-left" data-aos-duration="1500">
-              <img
-                style="width: 100%; height: auto"
-                id="hero-slika"
-                src="../img/skije.png"
-                alt="slika-odela"
-                srcset=""
-              />
+              <img style="width: 100%;height:auto;" id="hero-slika" src="/img/skije.png" alt="slika-odela" srcset="">
             </div>
           </div>
         </div>
       </section>
+  
+    
+      
+    
     </div>
 
-    <footer>
-      <div class="content">
+
+    <footer class="prekid">
+      <div class="content stand">
         <div class="top">
           <div class="logo-details">
-            <img src="../img/running.png" alt="logo" />
+            <img src="/img/running.png" alt="logo" />
             <span class="logo_name">Sport Mission</span>
           </div>
           <div class="media-icons">
@@ -232,18 +183,16 @@
         </div>
         <div class="link-boxes">
           <ul class="box">
-            <li class="link_name"><a href="../index.html">Home</a></li>
-            <li class="link_name"><a href="./clothes.html">Clothes</a></li>
-            <li class="link_name"><a href="./shoes.html">Shoes</a></li>
-            <li class="link_name"><a href="./ski.html">Ski</a></li>
+            <li class="link_name"><a href="/">Home</a></li>
+            <li class="link_name"><a href="clothes.html">Clothes</a></li>
+            <li class="link_name"><a href="shoes.html">Shoes</a></li>
+            <li class="link_name"><a href="ski.html">Ski</a></li>
           </ul>
           <ul class="box">
-            <li class="link_name"><a href="./MTB.html">MTB</a></li>
-            <li class="link_name"><a href="./sale.html">%Sale</a></li>
-            <li class="link_name"><a href="./contact.html">Contact</a></li>
-            <li class="link_name">
-              <a href="./contact.html">About us</a>
-            </li>
+            <li class="link_name"><a href="MTB.html">MTB</a></li>
+            <li class="link_name"><a href="sale.html">%Sale</a></li>
+            <li class="link_name"><a href="contact.html">Contact</a></li>
+            <li class="link_name"><a href="contact.html">About us</a></li>
           </ul>
           <ul id="map" class="box">
             <iframe
@@ -261,13 +210,11 @@
             <li>
               <input
                 id="mailInput"
-                type="email"
+                type="text"
                 placeholder="Enter your email"
               />
             </li>
-            <li>
-              <input type="button" value="Subscribe" onclick="subscribe()" />
-            </li>
+            <input type="button" value="Subscribe" onclick="subscribe()" />
           </ul>
         </div>
       </div>
@@ -277,12 +224,14 @@
             >Copyright © 2023 Grupa 4, Projekat UIIS. All rights reserved</span
           >
           <span class="policy_terms">
-            <a href="../index.html">Privacy policy</a>
-            <a href="../index.html">Terms & condition</a>
+            <a href="/">Privacy policy</a>
+            <a href="/">Terms & condition</a>
           </span>
         </div>
       </div>
     </footer>
+    
+    <script src="/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
@@ -293,30 +242,31 @@
     <script>
       $(document).ready(function () {
         screenCheck();
-        AOS.init(); /*inicijalizacija sa fade in animacije*/
-        $(".scroll-control .one").click(function () {
-          $.scrollify.move("#s-one");
+        AOS.init();/*inicijalizacija sa fade in animacije*/
+        $('.scroll-control .one').click(function () {
+          $.scrollify.move('#s-one');
         });
-        $(".scroll-control .two").click(function () {
-          $.scrollify.move("#s-two");
+        $('.scroll-control .two').click(function () {
+          $.scrollify.move('#s-two');
         });
-        $(".scroll-control .three").click(function () {
-          $.scrollify.move("#s-three");
+        $('.scroll-control .three').click(function () {
+          $.scrollify.move('#s-three');
         });
       });
 
-      $(window).on("resize", function () {
+      $(window).on('resize', function () {
         screenCheck();
       });
 
       function applyScroll() {
         $.scrollify({
-          section: ".scroll",
-          sectionName: "section-name",
+          section: '.scroll',
+          sectionName: 'section-name',
           //standardScrollElements: 'section',
-
-          interstitialSection: ".stand",
-          easing: "easeOutExpo",
+          
+          interstitialSection : ".stand",
+          interstitialSection : ".prekid",
+          easing: 'easeOutExpo',
           scrollSpeed: 1100,
           offset: 0,
           scrollbars: true,
@@ -333,17 +283,17 @@
         if (agentID || $(window).width() <= 1030) {
           // its mobile screen
           $.scrollify.destroy();
-          $("section").removeClass("scroll").removeAttr("style");
+          $('section').removeClass('scroll').removeAttr('style');
           $.scrollify.disable();
         } else {
           // its desktop
-          $("section").addClass("scroll");
+          $('section').addClass('scroll');
           applyScroll();
           $.scrollify.enable();
         }
       }
+
+      
     </script>
-    <script src="../scripts/newsletter.js"></script>
-    <script src="../scripts/navbar.js"></script>
   </body>
 </html>
