@@ -5,6 +5,11 @@ body {
   font-family: Verdana, sans-serif;
   margin: 0;
 }
+
+.clothes {
+  width: 1100px;
+  margin: auto;
+}
 .mySlides {
   display: none;
 }
@@ -14,7 +19,7 @@ img {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1100px;
+  width: 100%;
   position: relative;
   margin: auto;
 }
@@ -109,7 +114,6 @@ ul.list-group {
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 1100px;
 }
 
 ul.list-group li {
