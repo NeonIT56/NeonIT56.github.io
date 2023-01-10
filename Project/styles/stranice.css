@@ -309,7 +309,7 @@ footer .bottom-details .bottom_text {
     flex-direction: column;
     width: 100%;
   }
-  .pages.active {
+  .pages.aktiviraj {
     background-color: transparent;
     display: flex;
   }
