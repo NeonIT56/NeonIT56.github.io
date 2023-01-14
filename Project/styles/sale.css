@@ -40,10 +40,10 @@
   margin: auto;
   margin-top: 30px;
   background-color: #393b3b;
-  width: 250px;
+  width: 70%;
   font-size: 20px;
   color: #fff;
-  border: 1px solid #1d3c6a;
+  border: 1px solid #393b3b;
   padding: 10px 10px;
 }
 
@@ -53,6 +53,7 @@
 #btn3:hover {
   cursor: pointer;
   background-color: #7f8283;
+  border: 1px solid #7f8283;
 }
 
 #btn0:focus,
@@ -65,4 +66,54 @@
 #progress {
   color: #2b2b2b;
   font-size: 18px;
+}
+@media screen and (max-width: 1030px) {
+  .grid h3 {
+    font-size: 24px;
+    margin: 3vh 0;
+  }
+  #question {
+    font-size: 20px;
+  }
+  .grid #question {
+    font-size: 20px;
+    text-align: center;
+  }
+  .grid {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #btn0,
+  #btn1,
+  #btn2,
+  #btn3 {
+    font-size: 16px;
+  }
+
+  .grid {
+    padding: 10px 15px 15px 15px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  #btn0,
+  #btn1,
+  #btn2,
+  #btn3 span {
+    font-size: 16px;
+  }
+
+  .grid h3 {
+    font-size: 20px;
+  }
+  .grid {
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .grid #question {
+    font-size: 18px;
+  }
 }
