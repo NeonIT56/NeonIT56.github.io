@@ -55,7 +55,7 @@ const bikes = [
   },
 ];
 
-for (let i = 0; i <= bikes.length; i++) {
+for (let i = 0; i < bikes.length; i++) {
   let bikeElement = `
     <div class="card">
       <p class="brand">${bikes[i].brand}</p>
@@ -70,7 +70,6 @@ for (let i = 0; i <= bikes.length; i++) {
       </p>
       <p><button onclick="alert('Product added to cart!')">Add to Cart</button></p>
     </div>`;
-
   createBikes();
   function createBikes() {
     document

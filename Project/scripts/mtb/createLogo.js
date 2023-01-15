@@ -25,7 +25,7 @@ const brandLogos = [
   },
 ];
 
-for (let i = 0; i <= brandLogos.length; i++) {
+for (let i = 0; i < brandLogos.length; i++) {
   let logoElement = `
     <li>
       <img  src="${brandLogos[i].image}" alt="${brandLogos[i].brand} logo" />
